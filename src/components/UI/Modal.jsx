@@ -14,3 +14,5 @@ export default function Modal({children, open, className}){
         document.getElementById('modal')
     );
 }
+
+//
