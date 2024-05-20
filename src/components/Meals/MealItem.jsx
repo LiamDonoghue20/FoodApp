@@ -4,10 +4,13 @@ import CartContext from "../../store/CartContext";
 import Button from "../UI/Button";
 
 export default function MealItem({meal}){
+
     const cartCtx = useContext(CartContext);
+    //call the add item function on the card context with the meal selected
     function handleAddMealToCart(){
         cartCtx.addItem(meal);
     }
+
     return (
         <li className="meal-item">
             <article>

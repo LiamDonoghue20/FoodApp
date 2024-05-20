@@ -10,15 +10,14 @@ export default function Cart() {
 
     const cartContext = useContext(CartContext)
     const userProgressContext = useContext(UserProgressContext)
-
+    //find the total cost of all the itmes in the cart 
     const cartTotal = cartContext.items.reduce(
         (totalPrice, item) => totalPrice + item.quantity  * item.price,
             0
         )
-
+        //call functions on the user progress context given the buttons clicked
     function handleCloseCart(){
         userProgressContext.hideCart();
-
     }
 
     function handleGoToCheckout(){

@@ -10,6 +10,7 @@ const UserProgressContext = createContext({
 
 
 export function UserProgressContextProvider({children}){
+    //updates the different user progress states depending on the users place in the journey
     const [userProgress, setUserProgress] = useState('');
 
     function showCart() {
